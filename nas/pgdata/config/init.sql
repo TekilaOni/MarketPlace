@@ -1,6 +1,6 @@
-CREATE USER 'onisoft'@'%' IDENTIFIED BY 'teqonisoft2025'
+CREATE USER onisoft WITH PASSWORD 'teqonisoft2025';
 
-GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP, REFERENCES ON *.* TO 'onisoft'@'%'
+ALTER USER onisoft WITH SUPERUSER;
 
 CREATE SCHEMA auth_schema;
 CREATE SCHEMA product_schema;

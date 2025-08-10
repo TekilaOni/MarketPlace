@@ -11,7 +11,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - /nas/pgdata:/var/libs/postgresql/data
+      - ./nas/pgdata/volume:/var/libs/postgresql/data
+      - ./nas/pgdata/config/init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: unless-stopped
 
 networks:
